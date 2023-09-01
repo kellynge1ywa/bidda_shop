@@ -1,0 +1,52 @@
+<div>
+    <div class="flex w-[100%]">
+        <div class="w-[50%]">
+            <div id="signIn" >
+                <div>
+                    <h2 routerLink="/" class="cursor-pointer">bidda</h2>
+                </div>
+                <div>
+                    <span>where the lowest bidder wins</span>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col justify-center items-center  w-[50%]">
+            <div class="mr-20">
+                <div>
+                    <h3>Login to your bidda account</h3>
+                </div>
+                <div>
+                    <span class="text-[0.8em]">
+                        Don't have an account? <a routerLink="/users/register">SignUp</a>
+                    </span>
+                </div>
+            </div>
+            <form class="mr-20" [formGroup]="loginForm" (ngSubmit)="loginUser()">
+                <div>
+                    <label>Email</label> <br>
+                    <input class="w-[20em] rounded-[0.3em] border-2 border-slate-400 p-1 pl-3" type="email" placeholder="example@mail.com" formControlName="Email">
+                </div>
+                <div>
+                    <label>Password</label><br>
+                    <input  class="w-[20em] rounded-[0.3em] border-2 border-slate-400 p-1 pl-3" type="text" placeholder="Password" formControlName="Password">
+                </div>
+                <div>
+                    <a routerLink="/users/resetPassword">Forgot Password</a>
+                </div>
+                <div>
+                    <button  class="w-[20em] rounded-[0.3em] bg-orange-600 p-2">Sign In</button>
+                </div>
+                <div class="flex justify-center items-center border-2 rounded-[0.2em] mt-4 " >
+            
+                    <h1 class="p-1">G</h1>
+                    <span class="p-1"> Sign in with Google</span>
+                </div> 
+                
+            </form>
+        </div>
+
+
+    </div>
+</div>

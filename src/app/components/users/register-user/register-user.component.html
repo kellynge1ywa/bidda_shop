@@ -1,0 +1,57 @@
+<div class="h-[100%]">
+    <div class="flex w-[100%]">
+        <div id="signUp" class="w-[50%] " >
+            <div>
+                <h2 routerLink="/" class="cursor-pointer">bidda</h2>
+            </div>
+            <span>where the lowest bidder wins</span>
+        </div>
+        <div class="flex flex-col justify-center items-center ml-20 -[50%]">
+            <div>
+                <div>
+                    <h3>Create your bida account</h3>
+                </div>
+                <div>
+                    <span class="text-[0.8em]">
+                        Already a member? <a routerLink="/users/login">Login</a>
+                    </span>
+                </div>
+
+            </div>
+            <div class="w-[100%]">
+                <form class="w-[100%]" [formGroup]="registerForm" (ngSubmit)="registerUser()">
+                    <div class="w-[100%]">
+                        <label >Full Name</label> <br>
+                        <input class="w-[20em] rounded-[0.3em] border-2 border-slate-500 p-1 pl-3" type="text" placeholder="Full name" formControlName="Fullname" required>
+                    </div>
+                    <div>
+                        <label >Email</label><br>
+                        <input class="w-[20em] rounded-[0.3em] border-2 border-slate-500 p-1 pl-3" type="text" placeholder="example@mail.com" formControlName="Email" required>
+                    </div>
+                    <div>
+                        <label >Username</label><br>
+                        <input class="w-[20em] rounded-[0.3em] border-2 border-slate-500 p-1 pl-3" type="text" placeholder="username" formControlName="Username" required>
+                    </div>
+                    <div>
+                        <label >Password</label><br>
+                        <input class="w-[20em] rounded-[0.3em] border-2 border-slate-500 p-1 pl-3" type="password" placeholder="8+ characters" formControlName="Password" required>
+                    </div>
+                    <!-- <div>
+                        <label >Confirm Password</label>
+                        <input type="text">
+                    </div> -->
+                    <div class="mt-2">
+                        <button class="w-[20em] rounded-[0.3em] p-1 bg-orange-600">Create an account</button>
+                    </div> 
+                    <div class="flex justify-center items-center border-2 rounded-[0.2em] mt-4 " >
+            
+                        <h1 class="p-1">G</h1>
+                        <span class="p-1"> Sign up with Google</span>
+                    </div>                 
+                </form>
+            </div>
+        </div>
+        
+       
+    </div>
+</div>
